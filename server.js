@@ -54,8 +54,14 @@ app.get('/', (req, res) => {
   });
 });
 
-// Server start karo
-app.listen(PORT, () => {
-  console.log(`\n✅ Certificate Verification API chal raha hai!`);
-  console.log(`🌐 Local URL: http://localhost:${PORT}`);
-});
+// Server start karo (Local ke liye)
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`\n✅ Certificate Verification API chal raha hai!`);
+    console.log(`🌐 Local URL: http://localhost:${PORT}`);
+  });
+}
+
+// Vercel serverless environment ke liye export
+module.exports = app;
+
