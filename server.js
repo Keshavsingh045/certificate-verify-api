@@ -16,8 +16,8 @@ const certificates = {
   "3c129dbd-941c-4716-a332-f371b001e670": {
     valid: true,
     message: "This certificate is genuine and was issued by Hexadecimal Software Pvt Ltd.",
-    name: "Keshav Kundan",
-    issued_on: "20 April 2026"
+    name: "keshav kundan",
+    issued_on: "22 April 2026"
   }
 };
 
