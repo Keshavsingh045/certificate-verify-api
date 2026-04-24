@@ -19,18 +19,10 @@ const certificates = {
     name: "Keshav Kundan",
     issued_on: "20 April 2026"
   }
-  // Nayi certificate add karni ho to yahan add karo:
-  // "NEW-UUID-HERE": {
-  //   valid: true,
-  //   message: "This certificate is genuine and was issued by Hexadecimal Software Pvt Ltd.",
-  //   name: "Student Name",
-  //   issued_on: "DD Month YYYY"
-  // }
 };
 
 // =============================================
 // CERTIFICATE VERIFY ENDPOINT
-// URL: /api/v1/team/letter/verify/:id
 // =============================================
 app.get('/api/v1/team/letter/verify/:id', (req, res) => {
   const { id } = req.params;
@@ -66,5 +58,4 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`\n✅ Certificate Verification API chal raha hai!`);
   console.log(`🌐 Local URL: http://localhost:${PORT}`);
-  console.log(`🔗 Test link: http://localhost:${PORT}/api/v1/team/letter/verify/3c129dbd-941c-4716-a332-f371b001e670\n`);
 });
